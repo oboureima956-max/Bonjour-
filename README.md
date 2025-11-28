@@ -1,4 +1,243 @@
-<!DOCTYPE html>  <html class="dark" lang="fr"><head>  
+<!DOCTYPE html>  <html class="dark" lang="en"><head>  
+<meta charset="utf-8"/>  
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>  
+<title>Neural Linker V1.0 Dashboard</title>  
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>  
+<link href="https://fonts.googleapis.com" rel="preconnect"/>  
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>  
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>  
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>  
+<script>  
+    tailwind.config = {  
+      darkMode: "class",  
+      theme: {  
+        extend: {  
+          colors: {  
+            "primary": "#00FFFF",  
+            "background-light": "#f6f6f8",  
+            "background-dark": "#0A192F",  
+            "surface-dark": "#172A45",  
+            "text-primary-dark": "#E6F1FF",  
+            "text-secondary-dark": "#8892B0",  
+            "accent-green": "#39FF14",  
+          },  
+          fontFamily: {  
+            "display": ["Space Grotesk", "sans-serif"]  
+          },  
+          borderRadius: {  
+            "DEFAULT": "0.25rem",  
+            "lg": "0.5rem",  
+            "xl": "0.75rem",  
+            "full": "9999px"  
+          },  
+        },  
+      },  
+    }  
+  </script>  
+<style>  
+    .material-symbols-outlined {  
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;  
+      font-size: 24px;  
+    }  
+  </style>  
+<style>  
+    body {  
+      min-height: max(884px, 100dvh);  
+    }  
+  </style>  
+<style>  
+    body {  
+      min-height: max(884px, 100dvh);  
+    }  
+  </style>  
+  </head>  
+<body class="bg-background-light dark:bg-background-dark font-display">  
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">  
+<div class="sticky top-0 z-10 flex items-center bg-background-light/80 dark:bg-background-dark/80 p-4 backdrop-blur-sm justify-between">  
+<div class="flex size-12 shrink-0 items-center justify-start">  
+<span class="material-symbols-outlined text-text-primary-dark">neurology</span>  
+</div>  
+<h2 class="text-text-primary-dark text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Neural Linker</h2>  
+<div class="flex w-12 items-center justify-end">  
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 w-10 text-text-primary-dark gap-2 text-base font-bold leading-normal tracking-[0.015em]">  
+<span class="material-symbols-outlined">account_circle</span>  
+</button>  
+</div>  
+</div>  
+<main class="flex-1 pb-24 px-4">  
+<div class="flex flex-col gap-4 py-4">  
+<div class="flex items-center gap-2">  
+<span class="material-symbols-outlined text-primary">volunteer_activism</span>  
+<h3 class="text-text-primary-dark text-lg font-bold leading-tight tracking-[-0.015em]">Humanitarian Impact</h3>  
+</div>  
+<div class="flex flex-col gap-4 rounded-xl border border-primary/20 bg-surface-dark/50 p-4">  
+<p class="text-text-secondary-dark text-sm leading-relaxed">Our mission: advancing neural technology to empower humanity. Here's a glimpse of the lives we're changing together.</p>  
+<div class="grid grid-cols-2 gap-4">  
+<div class="flex flex-col gap-1 rounded-lg bg-background-dark/50 p-3 border border-primary/10">  
+<p class="text-text-secondary-dark text-xs font-medium">Rehabilitation</p>  
+<div class="flex items-baseline gap-1">  
+<p class="text-primary tracking-light text-xl font-bold">85%</p>  
+<p class="text-accent-green text-xs">+5%</p>  
+</div>  
+<p class="text-text-secondary-dark text-xs">Improved motor function</p>  
+</div>  
+<div class="flex flex-col gap-1 rounded-lg bg-background-dark/50 p-3 border border-primary/10">  
+<p class="text-text-secondary-dark text-xs font-medium">Communication</p>  
+<div class="flex items-baseline gap-1">  
+<p class="text-primary tracking-light text-xl font-bold">1,200+</p>  
+</div>  
+<p class="text-text-secondary-dark text-xs">New voices enabled</p>  
+</div>  
+</div>  
+<div class="border-t border-primary/10 pt-4">  
+<p class="text-text-primary-dark font-medium text-sm mb-2">Impact Story</p>  
+<blockquote class="border-l-2 border-primary pl-3">  
+<p class="text-text-secondary-dark text-sm italic">"For the first time in years, I could communicate with my family seamlessly. This technology gave me back my voice."</p>  
+<cite class="text-right block text-text-secondary-dark/80 text-xs not-italic mt-2">- Anonymous User</cite>  
+</blockquote>  
+</div>  
+</div>  
+</div>  
+<div class="flex flex-col items-stretch justify-start rounded-xl bg-surface-dark/50 border border-primary/20">  
+<div class="w-full bg-center bg-no-repeat aspect-[2/1] bg-cover rounded-t-xl" data-alt="Abstract visualization of neural pathways with glowing blue and cyan lines on a dark background." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCYLVIEkQYl81ugD-mSkVkAYNtW69bWFqgQKd13Ji2vHgVG_ZoLRjHdl0a1MQfx667GEbjaoNy-I3pTArQTVQXNnj_pMgSTor3fXzCLLkRyLnbG5L_v8qrSDM0uIAMnfH-RuHmoE6cpJ5IXVwM9_rcXJNIotiFabJiJofxAntPcar-ALncUOZsDRKMq17_wWDgtbfcUgqMp8kJz62azC9xOOpS5I9VxCdrsNAk3nPxJI2EIoJXwwULg4jci8xi2CBAI7kY46eW27unh"); background-position: center 40%;'></div>  
+<div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-2 p-4">  
+<p class="text-text-secondary-dark text-sm font-normal leading-normal">System Status</p>  
+<div class="flex items-center gap-2">  
+<div class="w-3 h-3 rounded-full bg-accent-green animate-pulse"></div>  
+<p class="text-text-primary-dark text-lg font-bold leading-tight tracking-[-0.015em]">All Systems Nominal</p>  
+</div>  
+<p class="text-text-secondary-dark text-base font-normal leading-normal">Real-time data synchronization is active and stable.</p>  
+</div>  
+<div class="flex flex-wrap gap-4 p-4 pt-0">  
+<div class="flex min-w-[120px] flex-1 flex-col gap-1 rounded-lg p-4 bg-background-dark/50 border border-primary/10">  
+<p class="text-text-secondary-dark text-sm font-medium leading-normal">Active Links</p>  
+<p class="text-primary tracking-light text-2xl font-bold leading-tight">42</p>  
+</div>  
+<div class="flex min-w-[120px] flex-1 flex-col gap-1 rounded-lg p-4 bg-background-dark/50 border border-primary/10">  
+<p class="text-text-secondary-dark text-sm font-medium leading-normal">Data Throughput</p>  
+<p class="text-primary tracking-light text-2xl font-bold leading-tight">12.8 Gb/s</p>  
+</div>  
+<div class="flex min-w-[120px] flex-1 flex-col gap-1 rounded-lg p-4 bg-background-dark/50 border border-primary/10">  
+<p class="text-text-secondary-dark text-sm font-medium leading-normal">Latency</p>  
+<p class="text-primary tracking-light text-2xl font-bold leading-tight">3ms</p>  
+</div>  
+</div>  
+</div>  
+<div class="flex flex-wrap gap-4 py-6">  
+<div class="flex w-full flex-col gap-4 rounded-xl border border-primary/20 bg-surface-dark/50 p-4">  
+<div>  
+<p class="text-text-primary-dark text-base font-medium leading-normal">Real-time Neural Activity</p>  
+<div class="flex items-baseline gap-2">  
+<p class="text-primary tracking-light text-[32px] font-bold leading-tight truncate">78%</p>  
+<p class="text-accent-green text-base font-medium leading-normal">+3.2%</p>  
+</div>  
+</div>  
+<div class="flex gap-3 overflow-x-auto pb-2">  
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-primary/20 px-4"><p class="text-primary text-sm font-medium leading-normal">1H</p></button>  
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-background-dark px-4"><p class="text-text-primary-dark text-sm font-medium leading-normal">24H</p></button>  
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-background-dark px-4"><p class="text-text-primary-dark text-sm font-medium leading-normal">7D</p></button>  
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-background-dark px-4"><p class="text-text-primary-dark text-sm font-medium leading-normal">30D</p></button>  
+</div>  
+<div class="flex min-h-[180px] flex-1 flex-col gap-8 py-4">  
+<svg fill="none" height="148" preserveAspectRatio="none" viewBox="-3 0 478 150" width="100%" xmlns="http://www.w3.org/2000/svg">  
+<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25V149H0V109Z" fill="url(#paint0_linear_chart)"></path>  
+<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25" stroke="#00FFFF" stroke-linecap="round" stroke-width="3"></path>  
+<defs>  
+<linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_chart" x1="236" x2="236" y1="1" y2="149">  
+<stop stop-color="#00FFFF" stop-opacity="0.3"></stop>  
+<stop offset="1" stop-color="#00FFFF" stop-opacity="0"></stop>  
+</linearGradient>  
+</defs>  
+</svg>  
+</div>  
+</div>  
+</div>  
+<div class="grid grid-cols-3 gap-4 pb-6">  
+<button class="flex flex-col items-center gap-2 rounded-xl p-4 bg-surface-dark/50 border border-primary/20">  
+<span class="material-symbols-outlined text-primary text-3xl">biotech</span>  
+<span class="text-text-primary-dark text-xs font-medium">Diagnostics</span>  
+</button>  
+<button class="flex flex-col items-center gap-2 rounded-xl p-4 bg-surface-dark/50 border border-primary/20">  
+<span class="material-symbols-outlined text-primary text-3xl">add_circle</span>  
+<span class="text-text-primary-dark text-xs font-medium">New Session</span>  
+</button>  
+<button class="flex flex-col items-center gap-2 rounded-xl p-4 bg-surface-dark/50 border border-primary/20">  
+<span class="material-symbols-outlined text-primary text-3xl">notifications_active</span>  
+<span class="text-text-primary-dark text-xs font-medium">View Alerts</span>  
+</button>  
+</div>  
+<div class="flex flex-col gap-4">  
+<h3 class="text-text-primary-dark text-lg font-bold leading-tight tracking-[-0.015em]">Active Networks</h3>  
+<ul class="flex flex-col gap-3">  
+<li class="flex items-center gap-4 rounded-xl p-4 bg-surface-dark/50 border border-primary/10">  
+<div class="flex items-center justify-center p-2 rounded-full bg-primary/20">  
+<span class="material-symbols-outlined text-primary">hub</span>  
+</div>  
+<div class="flex-1">  
+<p class="text-text-primary-dark font-medium">Cortex-A78 Link</p>  
+<p class="text-text-secondary-dark text-sm">Real-time Analysis</p>  
+</div>  
+<div class="w-1/3">  
+<svg class="w-full h-auto" viewBox="0 0 100 30">  
+<path d="M 0 20 C 10 20, 15 5, 25 15 S 40 28, 50 20 S 65 5, 75 12 S 90 25, 100 22" fill="none" stroke="#39FF14" stroke-linecap="round" stroke-width="2"></path>  
+</svg>  
+</div>  
+<div class="w-2.5 h-2.5 rounded-full bg-accent-green"></div>  
+</li>  
+<li class="flex items-center gap-4 rounded-xl p-4 bg-surface-dark/50 border border-primary/10">  
+<div class="flex items-center justify-center p-2 rounded-full bg-primary/20">  
+<span class="material-symbols-outlined text-primary">memory</span>  
+</div>  
+<div class="flex-1">  
+<p class="text-text-primary-dark font-medium">Hippocampus Stream</p>  
+<p class="text-text-secondary-dark text-sm">Memory Recall</p>  
+</div>  
+<div class="w-1/3">  
+<svg class="w-full h-auto" viewBox="0 0 100 30">  
+<path d="M 0 10 C 10 10, 15 25, 25 18 S 40 5, 50 10 S 65 20, 75 15 S 90 8, 100 12" fill="none" stroke="#00FFFF" stroke-linecap="round" stroke-width="2"></path>  
+</svg>  
+</div>  
+<div class="w-2.5 h-2.5 rounded-full bg-accent-green"></div>  
+</li>  
+<li class="flex items-center gap-4 rounded-xl p-4 bg-surface-dark/50 border border-primary/10">  
+<div class="flex items-center justify-center p-2 rounded-full bg-primary/20">  
+<span class="material-symbols-outlined text-primary">psychology</span>  
+</div>  
+<div class="flex-1">  
+<p class="text-text-primary-dark font-medium">Lobe-Motor Sync</p>  
+<p class="text-text-secondary-dark text-sm">Standby</p>  
+</div>  
+<div class="w-1/3">  
+<svg class="w-full h-auto" viewBox="0 0 100 30">  
+<path d="M 0 15 C 20 15, 40 15, 60 15 L 100 15" fill="none" stroke="#8892B0" stroke-linecap="round" stroke-width="2"></path>  
+</svg>  
+</div>  
+<div class="w-2.5 h-2.5 rounded-full bg-yellow-400"></div>  
+</li>  
+</ul>  
+</div>  
+</main>  
+<div class="fixed bottom-0 left-0 right-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm border-t border-primary/20">  
+<div class="flex justify-around p-2">  
+<button class="flex flex-col items-center justify-center gap-1 p-2 rounded-lg w-20 text-primary">  
+<span class="material-symbols-outlined">dashboard</span>  
+<span class="text-xs font-bold">Dashboard</span>  
+</button>  
+<button class="flex flex-col items-center justify-center gap-1 p-2 rounded-lg w-20 text-text-secondary-dark">  
+<span class="material-symbols-outlined">hub</span>  
+<span class="text-xs font-medium">Networks</span>  
+</button>  
+<button class="flex flex-col items-center justify-center gap-1 p-2 rounded-lg w-20 text-text-secondary-dark">  
+<span class="material-symbols-outlined">analytics</span>  
+<span class="text-xs font-medium">Analytics</span>  
+</button>  
+<button class="flex flex-col items-center justify-center gap-1 p-2 rounded-lg w-20 text-text-secondary-dark">  
+<span class="material-symbols-outlined">settings</span>  
+<span class="text-xs font-medium">Settings</span>  
+</button>  
+</div>  
+</div>  
+</div>  </body></html><!DOCTYPE html>  <html class="dark" lang="fr"><head>  
 <meta charset="utf-8"/>  
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>  
 <title>Neural Link V1.0 - Connexion IA</title>  
