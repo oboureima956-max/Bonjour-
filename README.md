@@ -1,6 +1,170 @@
 <!DOCTYPE html>  <html class="dark" lang="fr"><head>  
 <meta charset="utf-8"/>  
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>  
+<title>Paramètres d'Accessibilité &amp; Universalité</title>  
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>  
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>  
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>  
+<script>  
+        tailwind.config = {  
+            darkMode: "class",  
+            theme: {  
+                extend: {  
+                    colors: {  
+                        "primary": "#4F46E5", // A modern, vibrant blue  
+                        "accent": "#14B8A6", // Teal/Turquoise accent  
+                        "background-light": "#f6f6f8",  
+                        "background-dark": "#101022",  
+                        "card-light": "#ffffff",  
+                        "card-dark": "#1a1a33",  
+                        "text-light": "#1f2937",  
+                        "text-dark": "#e5e7eb",  
+                        "subtle-light": "#6b7280",  
+                        "subtle-dark": "#9ca3af",  
+                        "border-light": "#e5e7eb",  
+                        "border-dark": "#374151",  
+                    },  
+                    fontFamily: {  
+                        "display": ["Lexend", "sans-serif"]  
+                    },  
+                    borderRadius: {  
+                        "DEFAULT": "0.5rem", // Larger default for a softer look  
+                        "lg": "0.75rem",  
+                        "xl": "1rem",  
+                        "full": "9999px"  
+                    },  
+                },  
+            },  
+        }  
+    </script>  
+<style>  
+        body {  
+            -webkit-font-smoothing: antialiased;  
+            -moz-osx-font-smoothing: grayscale;  
+        }  
+        .material-symbols-outlined {  
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;  
+        }  
+    </style>  
+<style>  
+    body {  
+      min-height: max(884px, 100dvh);  
+    }  
+  </style>  
+  </head>  
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">  
+<div class="relative flex h-auto min-h-screen w-full flex-col">  
+<!-- Top App Bar -->  
+<header class="sticky top-0 z-10 flex items-center bg-background-light/80 dark:bg-background-dark/80 p-4 backdrop-blur-sm border-b border-border-light dark:border-border-dark">  
+<button class="flex size-10 shrink-0 items-center justify-center rounded-full text-subtle-light dark:text-subtle-dark hover:bg-black/5 dark:hover:bg-white/5">  
+<span class="material-symbols-outlined text-2xl">arrow_back</span>  
+</button>  
+<h1 class="text-lg font-bold leading-tight tracking-tight flex-1 ml-4">Accessibilité &amp; Universalité</h1>  
+<div class="flex size-10 shrink-0 items-center justify-center rounded-full text-subtle-light dark:text-subtle-dark">  
+<span class="material-symbols-outlined text-2xl">universal_currency_alt</span>  
+</div>  
+</header>  
+<main class="flex-1 pb-24">  
+<!-- Segmented Buttons / Tabs -->  
+<div class="flex px-4 py-4 sticky top-[73px] z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">  
+<div class="flex h-10 w-full items-center justify-center rounded-xl bg-gray-200 dark:bg-black/20 p-1">  
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-card-light dark:has-[:checked]:bg-card-dark has-[:checked]:shadow-sm text-subtle-light dark:text-subtle-dark has-[:checked]:text-text-light dark:has-[:checked]:text-text-dark text-sm font-medium leading-normal transition-colors duration-200">  
+<span class="truncate">Langue</span>  
+<input checked="" class="invisible w-0" name="accessibility-tabs" type="radio" value="Langue"/>  
+</label>  
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-card-light dark:has-[:checked]:bg-card-dark has-[:checked]:shadow-sm text-subtle-light dark:text-subtle-dark has-[:checked]:text-text-light dark:has-[:checked]:text-text-dark text-sm font-medium leading-normal transition-colors duration-200">  
+<span class="truncate">Affichage</span>  
+<input class="invisible w-0" name="accessibility-tabs" type="radio" value="Affichage"/>  
+</label>  
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-card-light dark:has-[:checked]:bg-card-dark has-[:checked]:shadow-sm text-subtle-light dark:text-subtle-dark has-[:checked]:text-text-light dark:has-[:checked]:text-text-dark text-sm font-medium leading-normal transition-colors duration-200">  
+<span class="truncate">Interaction</span>  
+<input class="invisible w-0" name="accessibility-tabs" type="radio" value="Interaction"/>  
+</label>  
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-card-light dark:has-[:checked]:bg-card-dark has-[:checked]:shadow-sm text-subtle-light dark:text-subtle-dark has-[:checked]:text-text-light dark:has-[:checked]:text-text-dark text-sm font-medium leading-normal transition-colors duration-200">  
+<span class="truncate">Cognitif</span>  
+<input class="invisible w-0" name="accessibility-tabs" type="radio" value="Cognitif"/>  
+</label>  
+</div>  
+</div>  
+<!-- Content Section -->  
+<div class="px-4">  
+<!-- Langue & Culture Section -->  
+<section class="flex flex-col gap-4">  
+<h2 class="text-xl font-bold leading-tight tracking-tight pt-4">Langue &amp; Culture</h2>  
+<div class="flex flex-col gap-2 rounded-xl bg-card-light dark:bg-card-dark p-4 shadow-sm">  
+<label class="flex flex-col">  
+<p class="text-base font-medium leading-normal pb-2">Langue de l'interface</p>  
+<select class="form-select flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-light dark:text-text-dark focus:outline-none focus:ring-2 focus:ring-primary border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark placeholder:text-subtle-light dark:placeholder:text-subtle-dark h-12 px-3 text-base font-normal leading-normal appearance-none bg-right-2 bg-no-repeat" style="background-image: url('data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 fill=%27none%27 viewBox=%270 0 20 20%27%3e%3cpath stroke=%27%236b7280%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%271.5%27 d=%27M6 8l4 4 4-4%27/%3e%3c/svg%3e')">  
+<option>Français</option>  
+<option>English</option>  
+<option>Español</option>  
+</select>  
+</label>  
+</div>  
+<div class="flex flex-col gap-2 rounded-xl bg-card-light dark:bg-card-dark p-4 shadow-sm">  
+<label class="flex flex-col">  
+<p class="text-base font-medium leading-normal pb-2">Formats régionaux</p>  
+<select class="form-select flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-light dark:text-text-dark focus:outline-none focus:ring-2 focus:ring-primary border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark placeholder:text-subtle-light dark:placeholder:text-subtle-dark h-12 px-3 text-base font-normal leading-normal appearance-none bg-right-2 bg-no-repeat" style="background-image: url('data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 fill=%27none%27 viewBox=%270 0 20 20%27%3e%3cpath stroke=%27%236b7280%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%271.5%27 d=%27M6 8l4 4 4-4%27/%3e%3c/svg%3e')">  
+<option>France (date, unités)</option>  
+<option>United States (date, units)</option>  
+<option>United Kingdom (date, units)</option>  
+</select>  
+</label>  
+</div>  
+</section>  
+<!-- This is a placeholder for other sections -->  
+<!-- Ideally, content would dynamically change based on the selected tab -->  
+<!-- Adaptation Cognitive & Personnalisation de l'IA Section -->  
+<section class="flex flex-col gap-4 mt-8">  
+<h2 class="text-xl font-bold leading-tight tracking-tight">Adaptation Cognitive</h2>  
+<!-- Slider Example -->  
+<div class="flex flex-col gap-3 rounded-xl bg-card-light dark:bg-card-dark p-4 shadow-sm">  
+<div class="flex items-center justify-between">  
+<label class="text-base font-medium leading-normal" for="ai-complexity">Rythme d'Intégration de l'IA</label>  
+<span class="text-sm font-medium text-subtle-light dark:text-subtle-dark">Modéré</span>  
+</div>  
+<input class="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer accent-accent" id="ai-complexity" max="100" min="0" type="range" value="50"/>  
+</div>  
+<!-- Toggle Switches Example -->  
+<div class="flex flex-col gap-2 rounded-xl bg-card-light dark:bg-card-dark divide-y divide-border-light dark:divide-border-dark shadow-sm">  
+<label class="flex items-center justify-between p-4 cursor-pointer">  
+<div>  
+<p class="text-base font-medium leading-normal">Mode Contraste Élevé</p>  
+<p class="text-sm text-subtle-light dark:text-subtle-dark">Augmente la lisibilité du texte.</p>  
+</div>  
+<div class="relative inline-flex items-center">  
+<input class="sr-only peer" type="checkbox"/>  
+<div class="w-11 h-6 bg-gray-200 dark:bg-gray-700 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-accent"></div>  
+</div>  
+</label>  
+<label class="flex items-center justify-between p-4 cursor-pointer">  
+<div>  
+<p class="text-base font-medium leading-normal">Descriptions Audio</p>  
+<p class="text-sm text-subtle-light dark:text-subtle-dark">Active la narration pour les images.</p>  
+</div>  
+<div class="relative inline-flex items-center">  
+<input checked="" class="sr-only peer" type="checkbox"/>  
+<div class="w-11 h-6 bg-gray-200 dark:bg-gray-700 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-accent"></div>  
+</div>  
+</label>  
+</div>  
+<!-- Information section -->  
+<div class="flex items-start gap-3 rounded-xl bg-primary/10 dark:bg-primary/20 p-4 text-primary dark:text-indigo-300">  
+<span class="material-symbols-outlined mt-0.5 text-xl">info</span>  
+<p class="text-sm">Nos principes d'inclusivité de l'IA garantissent la protection de la diversité neurocognitive pour une expérience équitable et personnalisée.</p>  
+</div>  
+</section>  
+<div class="mt-8 flex justify-center">  
+<button class="w-full max-w-xs h-12 px-6 bg-gray-200 dark:bg-card-dark text-text-light dark:text-text-dark text-base font-semibold rounded-xl hover:bg-gray-300 dark:hover:bg-opacity-80 transition-colors">  
+                        Réinitialiser aux paramètres par défaut  
+                     </button>  
+</div>  
+</div>  
+</main>  
+</div>  
+</body></html><!DOCTYPE html>  <html class="dark" lang="fr"><head>  
+<meta charset="utf-8"/>  
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>  
 <title>Évolution vers Homo Technolocus</title>  
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>  
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>  
