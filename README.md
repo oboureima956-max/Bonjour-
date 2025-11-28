@@ -1,6 +1,158 @@
 <!DOCTYPE html>  <html class="dark" lang="fr"><head>  
 <meta charset="utf-8"/>  
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>  
+<title>Neural Link V1.0</title>  
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>  
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>  
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>  
+<script>  
+        tailwind.config = {  
+            darkMode: "class",  
+            theme: {  
+                extend: {  
+                    colors: {  
+                        "primary": "#00BFFF",  
+                        "background-light": "#f6f6f8",  
+                        "background-dark": "#121212",  
+                    },  
+                    fontFamily: {  
+                        "display": ["Space Grotesk", "sans-serif"]  
+                    },  
+                    borderRadius: {  
+                        "DEFAULT": "0.25rem",  
+                        "lg": "0.5rem",  
+                        "xl": "0.75rem",  
+                        "full": "9999px"  
+                    },  
+                    animation: {  
+                        pulse: 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',  
+                    },  
+                    keyframes: {  
+                        pulse: {  
+                            '0%, 100%': {  
+                                opacity: 1,  
+                                transform: 'scale(1)'  
+                            },  
+                            '50%': {  
+                                opacity: 0.7,  
+                                transform: 'scale(1.05)'  
+                            },  
+                        },  
+                    },  
+                },  
+            },  
+        }  
+    </script>  
+<style>  
+    body {  
+      min-height: max(884px, 100dvh);  
+    }  
+  </style>  
+<style>  
+    body {  
+      min-height: max(884px, 100dvh);  
+    }  
+  </style>  
+  </head>  
+<body class="bg-background-light dark:bg-background-dark font-display text-[#E0E0E0]">  
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">  
+<div class="flex items-center p-4">  
+<button class="flex size-10 shrink-0 items-center justify-center rounded-full text-[#E0E0E0] transition-colors hover:bg-white/10">  
+<span class="material-symbols-outlined text-2xl">arrow_back</span>  
+</button>  
+<h2 class="flex-1 text-center text-xl font-bold leading-tight tracking-tight text-[#E0E0E0]">Connexion Neurale IA</h2>  
+<button class="flex size-10 shrink-0 items-center justify-center rounded-full text-[#E0E0E0] transition-colors hover:bg-white/10">  
+<span class="material-symbols-outlined text-2xl">menu</span>  
+</button>  
+</div>  
+<main class="flex-grow flex flex-col items-center px-4 pt-4 pb-6">  
+<div class="relative flex h-80 w-full max-w-sm flex-col items-center justify-center">  
+<div class="relative flex h-64 w-64 items-center justify-center">  
+<div class="absolute inset-0 animate-pulse rounded-full bg-primary/10"></div>  
+<div class="absolute inset-[15%] animate-pulse rounded-full bg-primary/20 [animation-delay:-0.5s]"></div>  
+<div class="absolute inset-[30%] rounded-full bg-primary/40"></div>  
+<div class="absolute h-full w-full bg-contain bg-center bg-no-repeat" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCb25AcgzB-Yxnk6OM1N9M9aXrdQMvBf1U6qjLQr45CuJQTWoPz7Cqu_msEeWBINcMG6Wl8WsT1vLDPo87XvZzPolwMzLM0DFqzRQ4mOZ-UW5yk_AMhi3b7c0oRmtc0GLR3kLfZRaIeob6HzxCy8H4vtnn3HuPUneqd-E-c1sponfM0mJ1F723qTdZK6mUeeTU277wlnFXLXQwFe_Y7XwoNr_gNhsPdNpJHcoExF_7QerDAx3xIMaJfXkkEOZCLXFaJO9sb88T6DUZI"); mix-blend-mode: screen; opacity: 0.3;'></div>  
+<div class="relative z-10 flex flex-col items-center">  
+<h1 class="text-[32px] font-bold leading-tight tracking-wider text-[#39FF14]">CONNECTÉ</h1>  
+<p class="text-sm font-normal leading-normal text-white/70">Statut: Nominal</p>  
+</div>  
+</div>  
+<div class="absolute bottom-0 flex w-full flex-col items-center">  
+<div class="flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-1.5">  
+<div class="h-2 w-2 animate-pulse rounded-full bg-[#39FF14] shadow-[0_0_8px_0_#39FF14]"></div>  
+<p class="text-sm font-medium text-white/90">Statut de l'Intelligence Active: <span class="font-bold text-[#39FF14]">Proactive</span></p>  
+</div>  
+</div>  
+</div>  
+<div class="mt-8 w-full max-w-sm">  
+<h3 class="mb-3 text-lg font-semibold text-white/90">Modes d'Interaction IA</h3>  
+<div class="grid grid-cols-1 gap-3 sm:grid-cols-2">  
+<button class="flex items-center justify-between gap-3 rounded-lg border border-primary bg-primary/10 p-3 text-left transition-all hover:bg-primary/20">  
+<div>  
+<p class="font-semibold text-white">Assistance Proactive</p>  
+<p class="text-xs text-white/60">L'IA anticipe et assiste.</p>  
+</div>  
+<span class="material-symbols-outlined text-primary">check_circle</span>  
+</button>  
+<button class="flex items-center justify-between gap-3 rounded-lg border border-white/20 bg-white/5 p-3 text-left transition-all hover:bg-white/10">  
+<div>  
+<p class="font-medium text-white/80">Focus Humanitaire</p>  
+<p class="text-xs text-white/60">Priorise les actions à impact.</p>  
+</div>  
+</button>  
+<button class="flex items-center justify-between gap-3 rounded-lg border border-white/20 bg-white/5 p-3 text-left transition-all hover:bg-white/10">  
+<div>  
+<p class="font-medium text-white/80">Contribution Optimisée</p>  
+<p class="text-xs text-white/60">Maximise l'efficacité des tâches.</p>  
+</div>  
+</button>  
+</div>  
+</div>  
+<div class="mt-8 w-full max-w-sm">  
+<details class="group">  
+<summary class="list-none flex cursor-pointer items-center justify-between rounded-md p-2 transition-colors hover:bg-white/10">  
+<h3 class="text-lg font-semibold text-white/90">Paramètres d'Optimisation IA</h3>  
+<span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>  
+</summary>  
+<div class="mt-4 space-y-4 border-l border-white/20 pl-4 text-sm text-white/70">  
+<div class="flex items-center justify-between">  
+<label class="text-white/90" for="intervention-level">Niveau d'intervention</label>  
+<span class="text-primary font-medium">Élevé</span>  
+</div>  
+<input class="h-1.5 w-full cursor-pointer appearance-none rounded-full bg-white/20 accent-primary" id="intervention-level" max="100" min="0" type="range" value="80"/>  
+<div class="flex items-center justify-between">  
+<label class="text-white/90" for="respect-prefs">Respect des préférences</label>  
+<div class="relative inline-flex h-6 w-11 cursor-pointer items-center rounded-full">  
+<input checked="" class="peer sr-only" id="respect-prefs" type="checkbox"/>  
+<span class="h-full w-full rounded-full bg-white/20 peer-checked:bg-primary"></span>  
+<span class="absolute left-1 top-1 h-4 w-4 rounded-full bg-white transition-all peer-checked:left-6"></span>  
+</div>  
+</div>  
+</div>  
+</details>  
+</div>  
+<div class="my-8 w-full max-w-sm">  
+<button class="w-full rounded-lg bg-[#FF073A] py-4 px-6 font-bold text-black shadow-lg shadow-red-500/20 transition-colors hover:bg-red-700">Déconnecter</button>  
+</div>  
+<div class="w-full flex flex-wrap gap-4">  
+<div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-xl border border-white/20 bg-white/5 p-5">  
+<p class="text-base font-medium leading-normal text-[#E0E0E0]">Puissance du Signal</p>  
+<p class="text-3xl font-bold leading-tight tracking-light text-[#39FF14]">98%</p>  
+</div>  
+<div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-xl border border-white/20 bg-white/5 p-5">  
+<p class="text-base font-medium leading-normal text-[#E0E0E0]">Débit de Données</p>  
+<p class="text-3xl font-bold leading-tight tracking-light text-primary">1.2 <span class="text-xl">Gbps</span></p>  
+</div>  
+<div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-xl border border-white/20 bg-white/5 p-5">  
+<p class="text-base font-medium leading-normal text-[#E0E0E0]">Latence</p>  
+<p class="text-3xl font-bold leading-tight tracking-light text-[#FFD700]">12<span class="text-xl">ms</span></p>  
+</div>  
+</div>  
+</main>  
+</div>  
+</body></html><!DOCTYPE html>  <html class="dark" lang="fr"><head>  
+<meta charset="utf-8"/>  
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>  
 <title>Projets Humanitaires - Neural Linker</title>  
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>  
 <link href="https://fonts.googleapis.com" rel="preconnect"/>  
