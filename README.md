@@ -1,6 +1,156 @@
 <!DOCTYPE html>  <html class="dark" lang="fr"><head>  
 <meta charset="utf-8"/>  
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>  
+<title>Évolution vers Homo Technolocus</title>  
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>  
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>  
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>  
+<script>  
+    tailwind.config = {  
+      darkMode: "class",  
+      theme: {  
+        extend: {  
+          colors: {  
+            "primary": "#1313ec",  
+            "background-light": "#f6f6f8",  
+            "background-dark": "#101022",  
+          },  
+          fontFamily: {  
+            "display": ["Space Grotesk", "sans-serif"]  
+          },  
+          borderRadius: {  
+            "DEFAULT": "0.25rem",  
+            "lg": "0.5rem",  
+            "xl": "0.75rem",  
+            "full": "9999px"  
+          },  
+        },  
+      },  
+    }  
+  </script>  
+<style>  
+    .material-symbols-outlined {  
+      font-variation-settings:  
+        'FILL' 0,  
+        'wght' 400,  
+        'GRAD' 0,  
+        'opsz' 24  
+    }  
+  </style>  
+<style>  
+    body {  
+      min-height: max(884px, 100dvh);  
+    }  
+  </style>  
+<style>  
+    body {  
+      min-height: max(884px, 100dvh);  
+    }  
+  </style>  
+  </head>  
+<body class="bg-background-light dark:bg-background-dark font-display">  
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark overflow-x-hidden">  
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10">  
+<div class="flex size-12 shrink-0 items-center justify-start">  
+<span class="material-symbols-outlined text-gray-800 dark:text-white" style="font-size: 24px;">arrow_back</span>  
+</div>  
+<h1 class="text-gray-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Évolution vers Homo Technolocus</h1>  
+<div class="flex w-12 items-center justify-end">  
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 bg-transparent text-gray-800 dark:text-white gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0">  
+<span class="material-symbols-outlined" style="font-size: 24px;">settings</span>  
+</button>  
+</div>  
+</div>  
+<main class="flex-1 px-4">  
+<h2 class="text-gray-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] pt-4 pb-2">Contrôles Granulaires de la Vitesse d'Intégration</h2>  
+<div class="flex flex-col gap-4 p-4 bg-gray-100 dark:bg-black/20 rounded-xl">  
+<div class="flex items-center gap-4">  
+<span class="material-symbols-outlined text-primary">speed</span>  
+<p class="text-gray-800 dark:text-white text-base font-medium leading-normal flex-1">Rythme d'adaptation de l'IA</p>  
+</div>  
+<div class="flex flex-col gap-2">  
+<input class="w-full h-2 bg-gray-300 dark:bg-gray-700/50 rounded-lg appearance-none cursor-pointer range-lg accent-primary" id="integration-speed" max="100" min="0" type="range" value="42"/>  
+<div class="flex justify-between text-xs text-gray-500 dark:text-gray-400">  
+<span>Prudent</span>  
+<span>Équilibré</span>  
+<span>Accéléré</span>  
+</div>  
+</div>  
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Ajustez la vitesse à laquelle l'IA s'intègre et propose des optimisations. Votre confort est la priorité.</p>  
+</div>  
+<h2 class="text-gray-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] pt-8 pb-2">Zones de Sécurité Cognitives</h2>  
+<div class="flex flex-col gap-4">  
+<div class="flex items-center gap-4 bg-gray-100 dark:bg-black/20 p-4 rounded-xl cursor-pointer">  
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/20 shrink-0 size-12">  
+<span class="material-symbols-outlined">psychology_alt</span>  
+</div>  
+<div class="flex-1">  
+<p class="text-gray-900 dark:text-white text-base font-medium leading-normal">Noyau Identitaire</p>  
+<p class="text-gray-500 dark:text-gray-400 text-sm">Définir les souvenirs et valeurs fondamentaux à préserver.</p>  
+</div>  
+<span class="material-symbols-outlined text-gray-500 dark:text-gray-400">chevron_right</span>  
+</div>  
+<div class="flex items-center gap-4 bg-gray-100 dark:bg-black/20 p-4 rounded-xl cursor-pointer">  
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/20 shrink-0 size-12">  
+<span class="material-symbols-outlined">palette</span>  
+</div>  
+<div class="flex-1">  
+<p class="text-gray-900 dark:text-white text-base font-medium leading-normal">Créativité &amp; Intuition</p>  
+<p class="text-gray-500 dark:text-gray-400 text-sm">Protéger les processus de pensée non-linéaire.</p>  
+</div>  
+<span class="material-symbols-outlined text-gray-500 dark:text-gray-400">chevron_right</span>  
+</div>  
+</div>  
+<h2 class="text-gray-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] pt-8 pb-2">Feedbacks Clairs sur l'Impact</h2>  
+<div class="relative flex flex-col gap-4 bg-gradient-to-br from-primary/10 to-transparent dark:from-primary/20 dark:to-transparent p-4 rounded-xl border border-primary/20">  
+<div class="absolute top-4 right-4 flex items-center gap-1 text-primary text-xs font-medium">  
+<span class="material-symbols-outlined text-sm">insights</span>  
+<span>ANALYSE EN COURS</span>  
+</div>  
+<div class="flex items-start gap-4">  
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/20 shrink-0 size-10 mt-1">  
+<span class="material-symbols-outlined">person</span>  
+</div>  
+<div>  
+<p class="text-gray-900 dark:text-white text-base font-medium leading-normal">Renforcement Individuel</p>  
+<p class="text-gray-500 dark:text-gray-400 text-sm">L'IA augmente vos capacités sans altérer votre personnalité.</p>  
+</div>  
+</div>  
+<div class="flex items-start gap-4">  
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/20 shrink-0 size-10 mt-1">  
+<span class="material-symbols-outlined">hub</span>  
+</div>  
+<div>  
+<p class="text-gray-900 dark:text-white text-base font-medium leading-normal">Symbiose vs. Fusion</p>  
+<p class="text-gray-500 dark:text-gray-400 text-sm">Collaboration homme-IA à 98% symbiotique. Contrôle maintenu.</p>  
+</div>  
+</div>  
+</div>  
+<div class="h-24"></div>  
+</main>  
+<div class="fixed bottom-0 left-0 right-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-lg border-t border-gray-200 dark:border-white/10">  
+<div class="flex justify-around items-center h-20 px-4">  
+<a class="flex flex-col items-center gap-1 text-gray-500 dark:text-gray-400" href="#">  
+<span class="material-symbols-outlined">dashboard</span>  
+<span class="text-xs">Dashboard</span>  
+</a>  
+<a class="flex flex-col items-center gap-1 text-primary" href="#">  
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">neurology</span>  
+<span class="text-xs font-bold">Évolution</span>  
+</a>  
+<a class="flex flex-col items-center gap-1 text-gray-500 dark:text-gray-400" href="#">  
+<span class="material-symbols-outlined">monitoring</span>  
+<span class="text-xs">Visualisation</span>  
+</a>  
+<a class="flex flex-col items-center gap-1 text-gray-500 dark:text-gray-400" href="#">  
+<span class="material-symbols-outlined">account_circle</span>  
+<span class="text-xs">Profil</span>  
+</a>  
+</div>  
+</div>  
+</div>  </body></html><!DOCTYPE html>  <html class="dark" lang="fr"><head>  
+<meta charset="utf-8"/>  
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>  
 <title>Neural Link V1.0</title>  
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>  
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>  
