@@ -1,6 +1,172 @@
 <!DOCTYPE html>  <html class="dark" lang="fr"><head>  
 <meta charset="utf-8"/>  
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>  
+<title>Neural Link V1.0</title>  
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>  
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>  
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>  
+<script>  
+        tailwind.config = {  
+            darkMode: "class",  
+            theme: {  
+                extend: {  
+                    colors: {  
+                        "primary": "#00BFFF",  
+                        "background-light": "#f6f6f8",  
+                        "background-dark": "#121212",  
+                    },  
+                    fontFamily: {  
+                        "display": ["Space Grotesk", "sans-serif"]  
+                    },  
+                    borderRadius: {  
+                        "DEFAULT": "0.25rem",  
+                        "lg": "0.5rem",  
+                        "xl": "0.75rem",  
+                        "full": "9999px"  
+                    },  
+                    animation: {  
+                        pulse: 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',  
+                        'graph-pulse': 'graph-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',  
+                    },  
+                    keyframes: {  
+                        pulse: {  
+                            '0%, 100%': {  
+                                opacity: 1,  
+                                transform: 'scale(1)'  
+                            },  
+                            '50%': {  
+                                opacity: 0.7,  
+                                transform: 'scale(1.05)'  
+                            },  
+                        },  
+                        'graph-pulse': {  
+                          '0%, 100%': { opacity: '0.4' },  
+                          '50%': { opacity: '1' }  
+                        }  
+                    },  
+                },  
+            },  
+        }  
+    </script>  
+<style>  
+        body {  
+            min-height: max(884px, 100dvh);  
+        }  
+    </style>  
+<style>  
+    body {  
+      min-height: max(884px, 100dvh);  
+    }  
+  </style>  
+  </head>  
+<body class="bg-background-light dark:bg-background-dark font-display text-[#E0E0E0]">  
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">  
+<div class="flex items-center p-4">  
+<button class="flex size-10 shrink-0 items-center justify-center rounded-full text-[#E0E0E0] transition-colors hover:bg-white/10">  
+<span class="material-symbols-outlined text-2xl">arrow_back</span>  
+</button>  
+<h2 class="flex-1 text-center text-xl font-bold leading-tight tracking-tight text-[#E0E0E0]">Connexion Neurale IA Avancée</h2>  
+<button class="flex size-10 shrink-0 items-center justify-center rounded-full text-[#E0E0E0] transition-colors hover:bg-white/10">  
+<span class="material-symbols-outlined text-2xl">menu</span>  
+</button>  
+</div>  
+<main class="flex-grow flex flex-col items-center px-4 pt-4 pb-6">  
+<div class="w-full max-w-sm">  
+<h3 class="mb-3 text-lg font-semibold text-white/90">Visualisation des Ondes Cérébrales</h3>  
+<div class="rounded-xl border border-white/20 bg-white/5 p-4">  
+<div class="flex h-40 flex-col justify-between">  
+<div class="relative h-full w-full">  
+<div class="absolute inset-0 grid grid-rows-4">  
+<div class="border-t border-dashed border-white/10"></div>  
+<div class="border-t border-dashed border-white/10"></div>  
+<div class="border-t border-dashed border-white/10"></div>  
+<div class="border-t border-dashed border-white/10"></div>  
+</div>  
+<svg class="absolute inset-0 h-full w-full overflow-visible" fill="none" viewBox="0 0 300 160">  
+<path class="animate-[graph-pulse_2.5s_infinite_-0.2s]" d="M0 80 Q 25 40, 50 80 T 100 80 T 150 80 Q 175 120, 200 80 T 250 80 T 300 80" stroke="#FF5733" stroke-width="2"></path>  
+<path class="animate-[graph-pulse_2s_infinite_-0.4s]" d="M0 80 Q 15 110, 30 80 T 60 80 Q 75 50, 90 80 T 120 80 Q 135 110, 150 80 T 180 80 Q 195 50, 210 80 T 240 80 Q 255 110, 270 80 T 300 80" stroke="#C70039" stroke-width="2"></path>  
+<path class="animate-[graph-pulse_3s_infinite_-0.6s]" d="M0 80 C 40 20, 60 140, 100 80 S 140 20, 180 80 S 220 140, 260 80 S 300 80, 300 80" stroke="#900C3F" stroke-width="2"></path>  
+<path class="animate-[graph-pulse_1.5s_infinite_-0.8s]" d="M0 80 L 20 60 L 40 100 L 60 70 L 80 90 L 100 80 L 120 60 L 140 100 L 160 70 L 180 90 L 200 80 L 220 60 L 240 100 L 260 70 L 280 90 L 300 80" stroke="#581845" stroke-width="2"></path>  
+<path class="animate-[graph-pulse_3.5s_infinite_-1s]" d="M0 80 C 50 150, 100 10, 150 80 S 200 150, 250 10, 300 80" stroke="#00BFFF" stroke-width="2.5"></path>  
+</svg>  
+</div>  
+</div>  
+<div class="mt-3 flex flex-wrap justify-center gap-x-4 gap-y-1 text-xs">  
+<div class="flex items-center gap-1.5"><div class="h-2 w-2 rounded-full" style="background-color: #00BFFF;"></div><span>Gamma</span></div>  
+<div class="flex items-center gap-1.5"><div class="h-2 w-2 rounded-full" style="background-color: #FF5733;"></div><span>Beta</span></div>  
+<div class="flex items-center gap-1.5"><div class="h-2 w-2 rounded-full" style="background-color: #C70039;"></div><span>Alpha</span></div>  
+<div class="flex items-center gap-1.5"><div class="h-2 w-2 rounded-full" style="background-color: #900C3F;"></div><span>Theta</span></div>  
+<div class="flex items-center gap-1.5"><div class="h-2 w-2 rounded-full" style="background-color: #581845;"></div><span>Delta</span></div>  
+</div>  
+</div>  
+</div>  
+<div class="mt-6 flex w-full max-w-sm flex-col items-center">  
+<div class="flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-1.5">  
+<div class="h-2 w-2 animate-pulse rounded-full bg-[#39FF14] shadow-[0_0_8px_0_#39FF14]"></div>  
+<p class="text-sm font-medium text-white/90">Qualité du Signal: <span class="font-bold text-[#39FF14]">Excellent (98%)</span></p>  
+</div>  
+</div>  
+<div class="mt-8 w-full max-w-sm">  
+<h3 class="mb-3 text-lg font-semibold text-white/90">Modes de Focalisation Cérébrale</h3>  
+<div class="grid grid-cols-1 gap-3 sm:grid-cols-2">  
+<button class="flex items-center justify-between gap-3 rounded-lg border border-primary bg-primary/10 p-3 text-left transition-all hover:bg-primary/20">  
+<div>  
+<p class="font-semibold text-white">Focus Profond</p>  
+<p class="text-xs text-white/60">Concentration maximale.</p>  
+</div>  
+<span class="material-symbols-outlined text-primary">check_circle</span>  
+</button>  
+<button class="flex items-center justify-between gap-3 rounded-lg border border-white/20 bg-white/5 p-3 text-left transition-all hover:bg-white/10">  
+<div>  
+<p class="font-medium text-white/80">Créativité Augmentée</p>  
+<p class="text-xs text-white/60">Stimule l'inspiration.</p>  
+</div>  
+</button>  
+<button class="flex items-center justify-between gap-3 rounded-lg border border-white/20 bg-white/5 p-3 text-left transition-all hover:bg-white/10">  
+<div>  
+<p class="font-medium text-white/80">Apprentissage Accéléré</p>  
+<p class="text-xs text-white/60">Optimise l'assimilation.</p>  
+</div>  
+</button>  
+<button class="flex items-center justify-between gap-3 rounded-lg border border-white/20 bg-white/5 p-3 text-left transition-all hover:bg-white/10">  
+<div>  
+<p class="font-medium text-white/80">Relaxation Guidée</p>  
+<p class="text-xs text-white/60">Calme et sérénité.</p>  
+</div>  
+</button>  
+</div>  
+</div>  
+<div class="mt-8 w-full max-w-sm">  
+<details class="group">  
+<summary class="list-none flex cursor-pointer items-center justify-between rounded-md p-2 transition-colors hover:bg-white/10">  
+<h3 class="text-lg font-semibold text-white/90">Calibration IA par Ondes</h3>  
+<span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>  
+</summary>  
+<div class="mt-4 space-y-4 border-l border-white/20 pl-4 text-sm text-white/70">  
+<div class="flex items-center justify-between">  
+<label class="text-white/90" for="intention-sensitivity">Sensibilité d'Intention</label>  
+<span class="text-primary font-medium">85%</span>  
+</div>  
+<input class="h-1.5 w-full cursor-pointer appearance-none rounded-full bg-white/20 accent-primary" id="intention-sensitivity" max="100" min="0" type="range" value="85"/>  
+<div class="flex items-center justify-between">  
+<label class="text-white/90" for="feedback-loop">Boucle de Rétroaction Neuronale</label>  
+<div class="relative inline-flex h-6 w-11 cursor-pointer items-center rounded-full">  
+<input checked="" class="peer sr-only" id="feedback-loop" type="checkbox"/>  
+<span class="h-full w-full rounded-full bg-white/20 peer-checked:bg-primary"></span>  
+<span class="absolute left-1 top-1 h-4 w-4 rounded-full bg-white transition-all peer-checked:left-6"></span>  
+</div>  
+</div>  
+<button class="w-full rounded-lg bg-primary/20 py-2.5 px-4 font-semibold text-primary transition-colors hover:bg-primary/30">Lancer la recalibration</button>  
+</div>  
+</details>  
+</div>  
+<div class="my-8 w-full max-w-sm">  
+<button class="w-full rounded-lg bg-[#FF073A] py-4 px-6 font-bold text-black shadow-lg shadow-red-500/20 transition-colors hover:bg-red-700">Déconnexion Neurale</button>  
+</div>  
+</main>  
+</div>  </body></html><!DOCTYPE html>  <html class="dark" lang="fr"><head>  
+<meta charset="utf-8"/>  
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>  
 <title>Gestion Sensorielle IA</title>  
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>  
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>  
