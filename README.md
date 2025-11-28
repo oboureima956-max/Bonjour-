@@ -1,6 +1,190 @@
 <!DOCTYPE html>  <html class="dark" lang="fr"><head>  
 <meta charset="utf-8"/>  
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>  
+<title>Gestion Sensorielle IA</title>  
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>  
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>  
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>  
+<script>  
+        tailwind.config = {  
+            darkMode: "class",  
+            theme: {  
+                extend: {  
+                    colors: {  
+                        "primary": "#00f5d4", // Cyan électrique  
+                        "background-light": "#f6f6f8",  
+                        "background-dark": "#0d1117", // Gris anthracite/bleu nuit  
+                        "card-dark": "#161b22",  
+                        "accent-red": "#ff4d4d",  
+                    },  
+                    fontFamily: {  
+                        "display": ["Space Grotesk", "sans-serif"]  
+                    },  
+                    borderRadius: {  
+                        "DEFAULT": "0.5rem",  
+                        "lg": "0.75rem",  
+                        "xl": "1rem",  
+                        "full": "9999px",  
+                    },  
+                },  
+            },  
+        }  
+    </script>  
+<style>  
+        .material-symbols-outlined {  
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;  
+            font-size: 24px;  
+        }  
+    </style>  
+<style>  
+    body {  
+      min-height: max(884px, 100dvh);  
+    }  
+  </style>  
+  </head>  
+<body class="bg-background-dark font-display">  
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-dark dark group/design-root overflow-x-hidden">  
+<!-- Top App Bar -->  
+<div class="flex items-center bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10 border-b border-white/10">  
+<div class="flex size-12 shrink-0 items-center justify-start text-primary">  
+<span class="material-symbols-outlined text-3xl">neurology</span>  
+</div>  
+<h1 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Gestion Sensorielle IA</h1>  
+<div class="flex w-12 items-center justify-end">  
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 w-10 bg-transparent text-white/80 gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0 hover:bg-white/10 transition-colors">  
+<span class="material-symbols-outlined">signal_cellular_alt</span>  
+</button>  
+</div>  
+</div>  
+<main class="p-4 flex flex-col gap-6">  
+<!-- Panneau de Contrôle -->  
+<div class="flex flex-col gap-4 rounded-xl bg-card-dark p-4 @container">  
+<p class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">Panneau de Contrôle</p>  
+<p class="text-white/60 text-base font-normal leading-normal -mt-2">Activez et ajustez vos augmentations sensorielles.</p>  
+<!-- Toggles -->  
+<div class="flex flex-col gap-3">  
+<div class="flex items-center gap-4 min-h-14 justify-between">  
+<div class="flex items-center gap-4">  
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/20 shrink-0 size-10">  
+<span class="material-symbols-outlined">visibility</span>  
+</div>  
+<p class="text-white text-base font-normal leading-normal flex-1 truncate">Augmentation Visuelle</p>  
+</div>  
+<div class="shrink-0">  
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-white/10 p-0.5 has-[:checked]:justify-end has-[:checked]:bg-primary">  
+<div class="h-full w-[27px] rounded-full bg-background-dark" style="box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 8px, rgba(0, 0, 0, 0.06) 0px 3px 1px;"></div>  
+<input checked="" class="invisible absolute" type="checkbox"/>  
+</label>  
+</div>  
+</div>  
+<div class="flex items-center gap-4 min-h-14 justify-between">  
+<div class="flex items-center gap-4">  
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/20 shrink-0 size-10">  
+<span class="material-symbols-outlined">hearing</span>  
+</div>  
+<p class="text-white text-base font-normal leading-normal flex-1 truncate">Augmentation Auditive</p>  
+</div>  
+<div class="shrink-0">  
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-white/10 p-0.5 has-[:checked]:justify-end has-[:checked]:bg-primary">  
+<div class="h-full w-[27px] rounded-full bg-background-dark" style="box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 8px, rgba(0, 0, 0, 0.06) 0px 3px 1px;"></div>  
+<input class="invisible absolute" type="checkbox"/>  
+</label>  
+</div>  
+</div>  
+</div>  
+<!-- Sliders -->  
+<div class="border-t border-white/10 pt-4 mt-2 flex flex-col gap-4 @container">  
+<div class="relative flex w-full flex-col items-start justify-between gap-3 @[480px]:flex-row @[480px]:items-center">  
+<div class="flex w-full shrink-[3] items-center justify-between">  
+<p class="text-white text-base font-medium leading-normal">Intensité Vision Thermique</p>  
+<p class="text-white/80 text-sm font-normal leading-normal @[480px]:hidden">65%</p>  
+</div>  
+<div class="flex h-4 w-full items-center gap-4">  
+<div class="flex h-1.5 flex-1 rounded-full bg-white/20">  
+<div class="h-full rounded-full bg-primary" style="width: 65%;"></div>  
+<div class="relative"><div class="absolute -left-2.5 -top-[7px] size-5 rounded-full bg-white border-2 border-primary"></div></div>  
+</div>  
+<p class="text-white/80 text-sm font-normal leading-normal hidden @[480px]:block">65%</p>  
+</div>  
+</div>  
+<div class="relative flex w-full flex-col items-start justify-between gap-3 @[480px]:flex-row @[480px]:items-center">  
+<div class="flex w-full shrink-[3] items-center justify-between">  
+<p class="text-white/50 text-base font-medium leading-normal">Niveau Filtrage Sonore</p>  
+<p class="text-white/50 text-sm font-normal leading-normal @[480px]:hidden">0%</p>  
+</div>  
+<div class="flex h-4 w-full items-center gap-4 opacity-50">  
+<div class="flex h-1.5 flex-1 rounded-full bg-white/20">  
+<div class="h-full w-[0%] rounded-full bg-primary"></div>  
+<div class="relative"><div class="absolute -left-2.5 -top-[7px] size-5 rounded-full bg-white border-2 border-primary"></div></div>  
+</div>  
+<p class="text-white/80 text-sm font-normal leading-normal hidden @[480px]:block">0%</p>  
+</div>  
+</div>  
+</div>  
+<!-- Select -->  
+<div class="border-t border-white/10 pt-4 mt-2">  
+<label class="block text-white text-base font-medium mb-2" for="vision-mode">Mode Visuel</label>  
+<div class="relative">  
+<select class="w-full appearance-none rounded-lg bg-white/10 border-none text-white p-3 pr-8 focus:ring-2 focus:ring-primary" id="vision-mode">  
+<option>Normal</option>  
+<option selected="">Vision Thermique</option>  
+<option>Vision Nocturne</option>  
+</select>  
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-white/50 pointer-events-none">expand_more</span>  
+</div>  
+</div>  
+</div>  
+<!-- Visualisation des Flux -->  
+<div class="flex flex-col gap-4 rounded-xl bg-card-dark p-4 @container">  
+<p class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">Flux Sensoriels en Temps Réel</p>  
+<div class="w-full h-40 bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex items-center justify-center" data-alt="Visualisation de données abstraites représentant des ondes sonores et visuelles traitées par l'IA, avec des tons cyan et bleu foncé." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCl1em79HFfa0GXQISuvz9DDKWZu6wOKfPnKQcNRrgo3CImBd1Yy3iO5JuVZv-LvJdGBz9z8R8jY1EmaeYp0_NaCSwmtR1YCH9uB3PqFTvDhGNx4jvAMLF-1mCfjSFQDrjpmLPlXSZLbpDFAdWnqWvWQIq3FxlKzdCoBoCee8Caczos_bnA-QhXktpTECh2CDPmFTe8CyIhjSxpDicaAJjpZAkQ6CiRKIjmAy4tbTXHx0konlY7V-XTiY5NZ_FP1vtZ-nb3qd1rswhQ');">  
+<div class="flex items-center gap-2 bg-black/30 backdrop-blur-sm p-2 px-3 rounded-full">  
+<div class="size-2 rounded-full bg-primary animate-pulse"></div>  
+<p class="text-white/90 text-sm">IA active: 3 objets identifiés</p>  
+</div>  
+</div>  
+</div>  
+<!-- Personnalisation & Zones -->  
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">  
+<!-- Paramètres de Perception -->  
+<div class="flex flex-col gap-4 rounded-xl bg-card-dark p-4 @container">  
+<p class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">Personnalisation Neuronale</p>  
+<div class="flex flex-col gap-3">  
+<button class="w-full text-left p-3 rounded-lg bg-primary/20 text-white/90 hover:bg-primary/30 transition-colors flex justify-between items-center">  
+                            Profil Urbain <span class="material-symbols-outlined text-white/50">drive_file_rename_outline</span>  
+</button>  
+<button class="w-full text-left p-3 rounded-lg bg-white/10 text-white/90 hover:bg-white/20 transition-colors flex justify-between items-center">  
+                            Charger un profil <span class="material-symbols-outlined text-white/50">upload</span>  
+</button>  
+</div>  
+</div>  
+<!-- Zones d'Intérêt -->  
+<div class="flex flex-col gap-4 rounded-xl bg-card-dark p-4 @container items-center justify-center">  
+<p class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">Zones de Focus IA</p>  
+<div class="w-24 h-24 rounded-lg bg-white/10 flex items-center justify-center">  
+<span class="material-symbols-outlined text-primary text-5xl">filter_center_focus</span>  
+</div>  
+<button class="w-full text-center p-3 mt-2 rounded-lg bg-white/10 text-white/90 hover:bg-white/20 transition-colors">Définir Zone</button>  
+</div>  
+</div>  
+<!-- Éthique et Contrôle -->  
+<div class="flex flex-col gap-4 rounded-xl bg-card-dark p-4 @container mt-2">  
+<p class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">Contrôle Éthique</p>  
+<div class="flex flex-col sm:flex-row gap-3">  
+<button class="flex-1 flex items-center justify-center gap-2 p-3 rounded-lg bg-white/10 text-white/80 hover:bg-white/20 transition-colors">  
+<span class="material-symbols-outlined">gavel</span> Charte Éthique  
+                    </button>  
+<button class="flex-1 flex items-center justify-center gap-2 p-3 rounded-lg bg-accent-red/80 text-white font-bold hover:bg-accent-red transition-colors">  
+<span class="material-symbols-outlined">power_settings_new</span> Kill Switch  
+                    </button>  
+</div>  
+</div>  
+</main>  
+<div class="h-10"></div> <!-- Spacer at bottom -->  
+</div>  
+</body></html><!DOCTYPE html>  <html class="dark" lang="fr"><head>  
+<meta charset="utf-8"/>  
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>  
 <title>Évolution Neurale &amp; Autonomie IA</title>  
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>  
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>  
