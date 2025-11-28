@@ -1,4 +1,157 @@
-<!DOCTYPE html>  <html class="dark" lang="en"><head>  
+<!DOCTYPE html>  <html class="dark" lang="fr"><head>  
+<meta charset="utf-8"/>  
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>  
+<title>Projets Humanitaires - Neural Linker</title>  
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>  
+<link href="https://fonts.googleapis.com" rel="preconnect"/>  
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>  
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>  
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>  
+<script>  
+      tailwind.config = {  
+        darkMode: "class",  
+        theme: {  
+          extend: {  
+            colors: {  
+              "primary": "#1313ec",  
+              "background-light": "#f6f6f8",  
+              "background-dark": "#101022",  
+            },  
+            fontFamily: {  
+              "display": ["Space Grotesk", "sans-serif"]  
+            },  
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},  
+          },  
+        },  
+      }  
+    </script>  
+<style>  
+        .material-symbols-outlined {  
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;  
+        }  
+    </style>  
+<style>  
+    body {  
+      min-height: max(884px, 100dvh);  
+    }  
+  </style>  
+  </head>  
+<body class="bg-background-light dark:bg-background-dark font-display">  
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">  
+<!-- TopAppBar -->  
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10">  
+<div class="flex size-12 shrink-0 items-center justify-start">  
+<span class="material-symbols-outlined text-gray-800 dark:text-white text-2xl">menu</span>  
+</div>  
+<h1 class="text-gray-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Projets Humanitaires</h1>  
+<div class="flex w-12 items-center justify-end">  
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 bg-transparent text-gray-800 dark:text-white gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0">  
+<span class="material-symbols-outlined text-2xl">search</span>  
+</button>  
+</div>  
+</div>  
+<!-- HeadlineText -->  
+<h2 class="text-gray-900 dark:text-white tracking-light text-[28px] font-bold leading-tight px-4 text-left pb-3 pt-5">Connectez votre esprit, changez le monde.</h2>  
+<!-- SectionHeader: Ma Contribution -->  
+<h3 class="text-gray-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Ma Contribution</h3>  
+<!-- Stats -->  
+<div class="flex flex-wrap gap-4 p-4">  
+<div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-lg p-4 border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/20">  
+<p class="text-gray-600 dark:text-gray-400 text-base font-medium leading-normal">Projets Soutenus</p>  
+<p class="text-gray-900 dark:text-white tracking-light text-2xl font-bold leading-tight">3</p>  
+</div>  
+<div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-lg p-4 border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/20">  
+<p class="text-gray-600 dark:text-gray-400 text-base font-medium leading-normal">Données Contribuées</p>  
+<p class="text-gray-900 dark:text-white tracking-light text-2xl font-bold leading-tight">1,2 Go</p>  
+</div>  
+<div class="flex min-w-full flex-col gap-2 rounded-lg p-4 border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/20">  
+<div class="flex justify-between items-center">  
+<p class="text-gray-600 dark:text-gray-400 text-base font-medium leading-normal">Impact Généré</p>  
+<p class="text-gray-900 dark:text-white tracking-light text-xl font-bold leading-tight">7%</p>  
+</div>  
+<div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 mt-2">  
+<div class="bg-primary h-2.5 rounded-full" style="width: 45%"></div>  
+</div>  
+</div>  
+</div>  
+<!-- SectionHeader: Projets en cours -->  
+<h3 class="text-gray-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Découvrir les projets</h3>  
+<!-- Card 1 -->  
+<div class="p-4 pt-2 @container">  
+<div class="flex flex-col items-stretch justify-start rounded-xl overflow-hidden shadow-sm bg-white dark:bg-[#1C1C27]">  
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover" data-alt="Microscope and neural network overlay" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCUq2i5tiTyaF52xrDJb1NAow9DbtOu0i6pVC_vLiFJuxp6yiQBE-0kIm-WWq5K_7hTL292rWwwpXAm05BqfN5YoldCK7EczZ0agsNxa6HAP7lJ91iexhupvAZvlMFUaAglDUXrZxk6ua2L1NemM_vTyWSu-gYZOVeCp5w-2-rI2PWmI0ibXjjCfBhI5uZ8s8-sXD6Yqd1w4fgN58CIQ1XW6KhbpOxWF40RJdKAwxMr862LDvQpBUKPIKr76eU-9mslDRjL170DOKoA");'></div>  
+<div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-2 p-4">  
+<p class="text-primary dark:text-blue-400 text-sm font-medium leading-normal">Santé, IA, Afrique</p>  
+<p class="text-gray-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Améliorer le diagnostic précoce</p>  
+<p class="text-gray-600 dark:text-gray-400 text-base font-normal leading-normal">Utiliser l'IA pour détecter les maladies plus tôt et sauver des vies.</p>  
+<div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 my-2">  
+<div class="bg-primary h-2 rounded-full" style="width: 75%"></div>  
+</div>  
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal self-end">75% de l'objectif atteint</p>  
+<button class="flex min-w-[84px] max-w-[480px] w-full mt-2 cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-medium leading-normal">  
+<span class="truncate">En Savoir Plus</span>  
+</button>  
+</div>  
+</div>  
+</div>  
+<!-- Card 2 -->  
+<div class="p-4 pt-2 @container">  
+<div class="flex flex-col items-stretch justify-start rounded-xl overflow-hidden shadow-sm bg-white dark:bg-[#1C1C27]">  
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover" data-alt="Child learning on a tablet in a rural classroom" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAAn_OfdZbPGWkX8-BoL8LvlkNioDrhsyAs1HvMRT8kg_RGOHcn_0AsG7zttqE7OwhMP0Td1xR_a08i6caG5llNwxnaEIW3Q-4dzJPPeY8JJA2uEr0SjIQPrrDJVdSh9G_h8vqryecSCnoX25nhdNB8P2XybDkrdviyM7UscujT64DZROTnu5AAuj-qcyWRRiX3NIQRpnPZ5zRgJdpFV9Y2BgbPbvBjsa5AAYSJq__u7VrXP8HFttKptn2_EAGW_vvbJYSq5dWoMNrj");'></div>  
+<div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-2 p-4">  
+<p class="text-primary dark:text-blue-400 text-sm font-medium leading-normal">Éducation, IA</p>  
+<p class="text-gray-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Éducation pour tous via l'IA</p>  
+<p class="text-gray-600 dark:text-gray-400 text-base font-normal leading-normal">Créer des parcours d'apprentissage personnalisés pour les enfants dans les régions isolées.</p>  
+<div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 my-2">  
+<div class="bg-primary h-2 rounded-full" style="width: 40%"></div>  
+</div>  
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal self-end">40% de l'objectif atteint</p>  
+<button class="flex min-w-[84px] max-w-[480px] w-full mt-2 cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-medium leading-normal">  
+<span class="truncate">Participer</span>  
+</button>  
+</div>  
+</div>  
+</div>  
+<!-- Card 3 -->  
+<div class="p-4 pt-2 @container">  
+<div class="flex flex-col items-stretch justify-start rounded-xl overflow-hidden shadow-sm bg-white dark:bg-[#1C1C27]">  
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover" data-alt="Lush green forest with data streams" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAqBX5slC1EvugQTmM0pOhjEEWesiU14ijvp6kuguAEu8h-EFhJHaZCoMDxj5GwVJYH5O3HECTyaJK_UQfSR8bsSreIXJnBx8QiTnFSN1pFO6pHISSPE6t8vwNbzHyleDrgsPDKvKiIepNOvH7RFl8Qh7i8lQTZx7r2iVqEBAQf7Iwq8YNiX9e4x_QuZXTuZ9cx6REfVG3My7GtB_JLHo-6iynIBtL_O3b9o_g4TlmcxH94RWdJp6K-Dcnkv7HwlD64TS3Yx0dd1rH_");'></div>  
+<div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-2 p-4">  
+<p class="text-primary dark:text-blue-400 text-sm font-medium leading-normal">Environnement, Données</p>  
+<p class="text-gray-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Restauration des écosystèmes</p>  
+<p class="text-gray-600 dark:text-gray-400 text-base font-normal leading-normal">Analyser des données satellites pour cibler les zones prioritaires de reforestation.</p>  
+<div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 my-2">  
+<div class="bg-primary h-2 rounded-full" style="width: 62%"></div>  
+</div>  
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal self-end">62% de l'objectif atteint</p>  
+<button class="flex min-w-[84px] max-w-[480px] w-full mt-2 cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-medium leading-normal">  
+<span class="truncate">En Savoir Plus</span>  
+</button>  
+</div>  
+</div>  
+</div>  
+<div class="h-10"></div>  
+<!-- Bottom Navigation Bar -->  
+<div class="fixed bottom-0 left-0 right-0 h-20 bg-white/80 dark:bg-background-dark/80 backdrop-blur-lg border-t border-gray-200 dark:border-gray-800 flex justify-around items-center">  
+<a class="flex flex-col items-center text-gray-500 dark:text-gray-400" href="#">  
+<span class="material-symbols-outlined">home</span>  
+<span class="text-xs">Accueil</span>  
+</a>  
+<a class="flex flex-col items-center text-primary dark:text-blue-400" href="#">  
+<span class="material-symbols-outlined">volunteer_activism</span>  
+<span class="text-xs font-bold">Projets</span>  
+</a>  
+<a class="flex flex-col items-center text-gray-500 dark:text-gray-400" href="#">  
+<span class="material-symbols-outlined">monitoring</span>  
+<span class="text-xs">Données</span>  
+</a>  
+<a class="flex flex-col items-center text-gray-500 dark:text-gray-400" href="#">  
+<span class="material-symbols-outlined">person</span>  
+<span class="text-xs">Profil</span>  
+</a>  
+</div>  
+</div>  
+</body></html><!DOCTYPE html>  <html class="dark" lang="en"><head>  
 <meta charset="utf-8"/>  
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>  
 <title>Neural Linker V1.0 Dashboard</title>  
