@@ -5,6 +5,7 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>  
 <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>  
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>  
+NeuralOS cloud build test
 <script>  
         tailwind.config = {  
             darkMode: "class",  
