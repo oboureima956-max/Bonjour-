@@ -1685,6 +1685,7 @@ ht@4"
 </div>  
 <button class="w-full mt-2 text-primary font-bold py-3 px-6 rounded-lg border border-primary/50 hover:bg-primary/10 transition-colors flex items-center justify-center gap-2">  
 <span class="material-symbols-outlined">tune</span>  
-<span>LaE0E
+<span>LaE0E 
+NeuralOS cloud build test
   
 
