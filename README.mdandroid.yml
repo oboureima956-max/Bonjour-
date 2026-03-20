@@ -1,0 +1,7 @@
+.github/
+   workflows/
+      android.yml
+app/
+build.gradle
+settings.gradle
+README.md
