@@ -9,14 +9,14 @@ Déclencheurs : push sur principal, pull_request, tag v*
 name: Android CI/CD
 
 on:
-push:
-branches: [ "principal" ]        # ← votre branche principale
-pull_request:
-branches: [ "principal" ]
-workflow_dispatch:                  # déclenchement manuel possible
-push:
-tags:
-- "v*"                          # ex: v1.0.0 → déclenche la release
+  push:
+    branches: [ "principal" ]
+  pull_request:
+    branches: [ "principal" ]
+  workflow_dispatch:
+  push:
+    tags:
+      - "v*"                          ex: v1.0.0 → déclenche la release
 
 ---------------------------------------------------------------
 
