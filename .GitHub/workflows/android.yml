@@ -1,0 +1,59 @@
+name: 🤖 Android CI/CD
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: 🔨 Build APK
+    runs-on: ubuntu-latest
+
+    steps:
+      # 📥 Cloner le dépôt
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # ☕ Installer Java
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      # 📦 Cache Gradle pour accélérer
+      - name: Cache Gradle
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: gradle-${{ runner.os }}-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+          restore-keys: |
+            gradle-${{ runner.os }}
+
+      # 🔧 Donner les permissions à Gradle
+      - name: Grant execute permission
+        run: chmod +x ./gradlew
+
+      # 📥 Installer SDK Android
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
+
+      # 🧪 Vérifier les dépendances (évite crash silencieux)
+      - name: Gradle dependencies
+        run: ./gradlew dependencies
+
+      # 🏗️ Compiler APK DEBUG
+      - name: Build Debug APK
+        run: ./gradlew assembleDebug --stacktrace
+
+      # 📤 Upload APK
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-debug.apk
+          path: app/build/outputs/apk/debug/app-debug.apk
